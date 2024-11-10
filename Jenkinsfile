@@ -1,7 +1,11 @@
 pipeline {
     agent { 
+    node {
     label 'java && dev'
-     } 
+    customWorkspace '/home/Family/javaproject' 
+    }
+    
+    } 
     stages {
         stage('Build') {
             steps {
